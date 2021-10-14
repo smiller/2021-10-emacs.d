@@ -46,3 +46,9 @@
    ("d" (my/date-header) "date-header")
    ("t" (my/timestamp) "timestamp")))
 
+;; ripgrep and rg needed for projectile
+(straight-use-package 'ripgrep)
+(require 'ripgrep)
+
+(straight-use-package 'rg)
+(require 'rg)
