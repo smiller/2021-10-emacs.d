@@ -52,3 +52,28 @@
 
 (straight-use-package 'rg)
 (require 'rg)
+
+(global-set-key
+ (kbd "C-c q")
+ (defhydra hydra-quotatons (:color blue)
+   "quotations"
+   ("j" (insert "«") "«")
+   ("k" (insert "»") "»")
+   ("u" (insert "„") "„")
+   ("i" (insert "“") "“")
+   ("ms" (insert "♯") "♯")
+   ("mf" (insert "♭") "♭")
+   ("mn" (insert "♮") "♮")
+   ("ns" (insert "'") "nonsmart '")
+   ("nd" (insert "\"") "nonsmart \"")
+   ("." (insert "…") "…")
+   ("o" (insert "°") "°")
+   ("y" (insert "ʓ") "ʓ")
+   ("-" (insert "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ") "- - - line")
+   ("fe" (find-file "~/.emacs.d/personal/preload/custom-init.el") "emacs")
+   ("fo" (find-file "~/2021.emacs.d/init.el") "old-emacs")
+   ("fh" (find-file "~/Dropbox/m/gesta/2021/2021.md") "hodie")
+   ("fj" (find-file "~/Dropbox/m/gesta/2020/japanese.md") "japanese")
+   ("fs" (find-file "~/Dropbox/m/seans_books.md") "seans_books")
+   ("fz" (find-file "~/.zshrc") ".zshrc")
+   ))
