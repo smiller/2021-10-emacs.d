@@ -64,6 +64,7 @@
    ("ms" (insert "♯") "♯")
    ("mf" (insert "♭") "♭")
    ("mn" (insert "♮") "♮")
+   ("dm" (insert " — ") " — ")
    ("ns" (insert "'") "nonsmart '")
    ("nd" (insert "\"") "nonsmart \"")
    ("." (insert "…") "…")
@@ -77,3 +78,5 @@
    ("fs" (find-file "~/Dropbox/m/seans_books.md") "seans_books")
    ("fz" (find-file "~/.zshrc") ".zshrc")
    ))
+
+(add-hook 'text-mode-hook 'turn-on-smart-quotes)
